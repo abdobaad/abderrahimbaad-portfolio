@@ -1,0 +1,82 @@
+.header_container {
+  width: 100%;
+  height: 5rem;
+  //@extend background-color: #191e35;
+  background-color: #0a192f;
+  // background-color: #f0efef;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  color: #fff;
+
+  header {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      span {
+        font-size: 1.6rem;
+        color: rgb(80, 67, 37);
+      }
+      font-size: 1.5rem;
+      color: rgb(163, 163, 163);
+      font-family: "Mrs Sheppards", cursive;
+    }
+
+    .navigation {
+      color: #fff;
+      display: flex;
+      font-family: "Tenali Ramakrishna", sans-serif;
+      font-size: 1.2rem;
+
+      a {
+        // top: -5rem;
+        // opacity: 0;
+        /*    //  top: -5rem;
+        animation-name: scrollBottom;
+
+        animation-duration: 4s; */
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1.5rem;
+        position: relative;
+
+        // animation-delay: 1s;
+      }
+      a:last-child {
+        margin-right: 0;
+      }
+      a:hover {
+        cursor: pointer;
+      }
+      a:active,
+      a:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes scrollBottom {
+  0% {
+    top: -10rem;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

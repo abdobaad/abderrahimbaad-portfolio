@@ -1,0 +1,254 @@
+.card_container {
+  margin-right: 10%;
+  height: 25rem;
+  margin-bottom: 5rem;
+  display: flex;
+  a {
+    width: 60%;
+    .card-image {
+      width: 100%;
+      height: 100%;
+      background-color: #374866bc;
+
+      .img {
+        //background-color: #64ffdb31;
+        height: 100%;
+        mix-blend-mode: multiply;
+
+        //   background-color: #64ffdb;
+
+        //  background-image:#00ffeac0
+      }
+      .img:hover {
+        mix-blend-mode: normal;
+      }
+    }
+  }
+  .card-nfo {
+    width: 40%;
+    position: relative;
+    .featured_project {
+      margin: 1rem 0;
+      color: #64ffda;
+      font-family: "Tenali Ramakrishna", sans-serif;
+      font-size: 1.5rem;
+    }
+    .project_title {
+      margin: 1rem 0;
+      font-family: "Niconne", cursive;
+      color: rgb(168, 178, 209);
+
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .project_description {
+      min-height: 5rem;
+      display: flex;
+      align-items: center;
+      width: 130%;
+      position: relative;
+      padding: 1rem;
+      background-color: #262e4e;
+      color: #8289a0;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: "Tenali Ramakrishna", sans-serif;
+    }
+    .project_tech {
+      // margin-left: 10px;
+
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        color: #5a6172;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+
+        // margin-left: 0.5rem;
+      }
+    }
+    .project_links {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+.left {
+  .card_container {
+    .card-nfo {
+      text-align: right;
+
+      .project_description {
+        margin: 2rem 0 1rem 0;
+        margin-left: -38%;
+      }
+      .project_tech {
+        justify-content: flex-end;
+      }
+
+      .project_tech {
+        margin-left: 10px;
+
+        .item {
+          margin-left: 1rem;
+        }
+      }
+
+      .project_links {
+        right: 0;
+        margin-left: 1rem;
+
+        img {
+          height: 2rem;
+          width: 2rem;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.right {
+  .card_container {
+    flex-direction: row-reverse;
+    .card-nfo {
+      text-align: left;
+
+      .project_description {
+        margin: 2rem 0 1rem 0;
+        margin-right: -38%;
+      }
+      .project_tech {
+        justify-content: flex-start;
+      }
+      .project_tech {
+        margin-right: 10px;
+
+        .item {
+          margin-right: 1rem;
+        }
+      }
+      .project_links {
+        left: 0;
+        margin-right: 10px;
+
+        img {
+          height: 2rem;
+          width: 2rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left {
+    .card_container {
+      .card-nfo {
+        text-align: center;
+
+        .project_description {
+          margin-left: 0;
+        }
+        .project_tech {
+          justify-content: center;
+        }
+
+        .project_tech {
+          margin-left: 0;
+        }
+
+        .project_links {
+          right: 0;
+          margin-left: 1rem;
+
+          img {
+            height: 2rem;
+            width: 2rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    .card_container {
+      flex-direction: column;
+      .card-nfo {
+        text-align: center;
+
+        .project_description {
+          margin-right: 0;
+        }
+        .project_tech {
+          justify-content: center;
+        }
+        .project_tech {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .card_container {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      .card-image {
+        height: 15rem;
+      }
+    }
+    .card-nfo {
+      background-color: #262e4eab;
+      padding: 1rem 0;
+
+      width: 60%;
+      text-align: center;
+      .featured_project {
+        display: none;
+      }
+
+      .project_description {
+        width: auto;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card_container {
+    a {
+      width: 90%;
+    }
+    .card-nfo {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card_container {
+    margin-right: 0;
+    height: auto;
+    .card-nfo {
+      .featured_project {
+        font-size: 1rem;
+
+        margin: 0;
+      }
+      .project_title {
+        font-size: 1.5rem;
+
+        margin: 0;
+      }
+
+      .project_tech {
+        margin: 1rem 0 3rem 0;
+      }
+    }
+  }
+}

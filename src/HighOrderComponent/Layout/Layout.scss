@@ -1,0 +1,60 @@
+.layout_container {
+  //background-color: #191e35;
+  background-color: #0a192f;
+  //background-color: #f0efef;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+  h1 {
+    font-family: "Metal Mania", cursive;
+    color: #64ffda;
+    margin: 0;
+    animation-name: scrollToLeft;
+    animation-duration: 3s;
+    letter-spacing: 5px;
+  }
+  .line {
+    background-color: #fff;
+    height: 0.5px;
+    opacity: 0.1;
+
+    background-color: #fff;
+    height: 1px;
+    width: 30%;
+    margin-left: 1rem;
+  }
+}
+
+@keyframes scrollToLeft {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-container {
+    justify-content: center;
+    h1 {
+    }
+    .line {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-container {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

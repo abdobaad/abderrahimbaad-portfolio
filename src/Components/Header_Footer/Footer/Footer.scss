@@ -1,0 +1,13 @@
+.footer_container {
+  height: 4rem;
+  text-align: center;
+
+  footer {
+    color: rgb(168, 178, 209);
+    transition: 0.6s;
+  }
+
+  footer:hover {
+    color: #64ffda;
+  }
+}

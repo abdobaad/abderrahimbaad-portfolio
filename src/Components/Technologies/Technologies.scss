@@ -1,0 +1,39 @@
+.technologies {
+  // width: 70%;
+  margin: 5rem 0;
+  margin-bottom: 10rem;
+
+  .tech_icons-container {
+    // width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // justify-content: center;
+
+    img {
+      margin: 10px;
+      animation-name: showIcon;
+      animation-duration: 3s;
+    }
+  }
+}
+
+@keyframes showIcons {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .technologies {
+    .tech_icons-container {
+      justify-content: center;
+    }
+  }
+}

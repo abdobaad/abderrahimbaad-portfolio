@@ -1,0 +1,130 @@
+.main-home {
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  // align-items: center;
+  justify-content: center;
+
+  .main-home_content {
+    //margin-top: -3rem;
+    //width: 60%;
+    .hi {
+      color: #64ffda;
+      font-size: 1.5rem;
+      font-family: "Tenali Ramakrishna", sans-serif;
+      animation-name: scrollToTop;
+      position: relative;
+      transition-delay: 100ms;
+      //animation-delay: 1s;
+      // opacity: 1;
+      animation-duration: 1s;
+    }
+    .devname {
+      color: rgb(168, 178, 209);
+      font-size: 5rem;
+      font-family: "Niconne", cursive;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+      animation-name: scrollToTop;
+      transition-delay: 200ms;
+      position: relative;
+      // opacity: 1;
+      animation-duration: 2s;
+    }
+    .nfo {
+      color: rgb(139, 171, 184);
+      font-size: 2rem;
+      font-family: "Tenali Ramakrishna", sans-serif;
+
+      animation-name: scrollToTop;
+      position: relative;
+      // opacity: 1;
+      animation-duration: 2.5s;
+      transition-delay: 300ms;
+    }
+    p {
+      color: rgb(156, 156, 156);
+      width: 45%;
+      font-family: "Roboto", sans-serif;
+      transition-delay: 400ms;
+      animation-name: scrollToTop;
+      position: relative;
+      // opacity: 1;
+      animation-duration: 3s;
+    }
+  }
+
+  .home_btn {
+    margin-top: 5rem;
+    padding: 1rem;
+    border: 2px solid #64ffda;
+    font-family: "Tenali Ramakrishna", sans-serif;
+    width: 6rem;
+    font-size: 1.2rem;
+    // margin: 3rem auto;
+    color: #64ffda;
+    border-radius: 3px;
+    /*   animation-name: scrollToTop;
+    position: relative;
+    // opacity: 1;
+    animation-duration: 4s;
+    transition: 0.5s; */
+  }
+  .home_btn:hover {
+    cursor: pointer;
+    background-color: #64ffdb36;
+  }
+}
+
+@keyframes scrollToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    // top: 10px;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    top: 0;
+  }
+}
+
+////////////
+
+@media screen and (max-width: 1024px) {
+  .main-home {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-home {
+    .main-home_content {
+      .devname {
+        font-size: 3rem;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-home {
+    padding: 0 10px;
+    .main-home_content {
+      font-size: 0.7rem;
+      .devname {
+        font-size: 2rem;
+      }
+    }
+  }
+}

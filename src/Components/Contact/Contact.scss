@@ -1,0 +1,50 @@
+.contact_container {
+  margin-right: 10%;
+  padding: 10rem 0;
+  text-align: center;
+
+  .contact-me {
+    margin: 1rem 0;
+    color: #64ffda;
+    font-family: "Tenali Ramakrishna", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .contact_title {
+    /*  margin: 1rem 0;
+    font-family: "Niconne", cursive;
+    color: rgb(168, 178, 209);
+    font-size: 3rem;
+    font-weight: bold; */
+    font-family: "Metal Mania", cursive;
+    color: rgb(168, 178, 209);
+    margin-bottom: 5rem;
+    letter-spacing: 5px;
+  }
+
+  .about_me-now {
+    color: rgb(156, 156, 156);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .say_hello {
+    padding: 1rem;
+    border: 2px solid #64ffda;
+    font-family: "Tenali Ramakrishna", sans-serif;
+    width: 6rem;
+    margin: 3rem auto;
+    color: #64ffda;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  .say_hello:hover {
+    cursor: pointer;
+    background-color: #64ffdb36;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact_container {
+    margin-right: 0;
+  }
+}

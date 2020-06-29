@@ -1,0 +1,11 @@
+.works_container {
+  //  color: #64ffdb31;
+  margin-left: -1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .works_container {
+    //  color: #64ffdb31;
+    margin-left: 0;
+  }
+}
