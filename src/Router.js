@@ -6,7 +6,7 @@ import Contact from "./Components/Contact/Contact";
 function Router() {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route path="/" component={Home} />
     </Switch>
   );
 }
