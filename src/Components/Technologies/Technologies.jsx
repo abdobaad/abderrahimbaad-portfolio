@@ -7,6 +7,7 @@ import ReactjsIcon from "../../Resources/icons/react.svg";
 import NodejsIcon from "../../Resources/icons/nodejs.svg";
 import Mongodb from "../../Resources/icons/mongodb.svg";
 import SassIcon from "../../Resources/icons/sass.svg";
+import ReduxIcon from "../../Resources/icons/redux.svg";
 
 import "./Technologies.scss";
 
@@ -35,6 +36,9 @@ const Technologies = () => {
         </Slide>
         <Slide bottom delay={120} duration={400}>
           <img src={ReactjsIcon} alt="react" />
+        </Slide>
+        <Slide bottom delay={480} duration={400}>
+          <img src={ReduxIcon} alt="redux" />
         </Slide>
         <Slide bottom delay={240} duration={400}>
           <img src={NodejsIcon} alt="node" />
