@@ -34,16 +34,16 @@ const Technologies = () => {
         <Slide bottom delay={60} duration={400}>
           <img src={JavascriptIcon} alt="js" />
         </Slide>
-        <Slide bottom delay={120} duration={400}>
+        <Slide bottom delay={80} duration={400}>
           <img src={ReactjsIcon} alt="react" />
         </Slide>
-        <Slide bottom delay={480} duration={400}>
+        <Slide bottom delay={120} duration={400}>
           <img src={ReduxIcon} alt="redux" />
         </Slide>
-        <Slide bottom delay={240} duration={400}>
+        <Slide bottom delay={160} duration={400}>
           <img src={NodejsIcon} alt="node" />
         </Slide>
-        <Slide bottom delay={480} duration={400}>
+        <Slide bottom delay={180} duration={400}>
           <img src={Mongodb} alt="mongodb" />
         </Slide>
       </div>
