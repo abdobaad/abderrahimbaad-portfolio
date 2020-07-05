@@ -12,7 +12,7 @@ const array = [
     link: "https://mymoviesflixapp.herokuapp.com/",
     name: "MyFlixMovies",
     description:
-      "This is a search movies website connected to THE MOVIES DATA BASE, the desing and the code it's all by me,I hope you like it.",
+      "This is a search movies website connected to THE MOVIES DATA BASE, the design and the code it's all by me,I hope you like it.",
     tech: [
       "Reactjs",
       "Redux",
@@ -29,7 +29,7 @@ const array = [
     link: "https://electrohanot-app.herokuapp.com/",
     name: "ElectroHanota",
     description:
-      "This is an e-commerce full-stack website built with the MERN stack , the desing and the code it's all by me,I hope you like it.",
+      "This is an e-commerce full-stack website built with the MERN stack , the design and the code it's all by me,I hope you like it.",
     tech: ["Reactjs", "Redux", "Node.js", "Sass", "MongoDB", "ExpressJs"],
     image: image1,
     githubRepo: "https://github.com/abdobaad/hanotelectro-mernapp",
