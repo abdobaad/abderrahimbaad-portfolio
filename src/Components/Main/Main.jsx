@@ -14,9 +14,7 @@ const Main = () => {
         <div className="nfo">I build things for the web.</div>
 
         <p className="more-nfo">
-          I'm a FullStack web developer based in marrakech "Morocco",
-          spicializing more in frontEnd with ReactJs exceptional Hight-quality
-          websites and applications.
+        Web developer based in Morocco and loves Reactjs.
         </p>
       </div>
       <Fade bottom>

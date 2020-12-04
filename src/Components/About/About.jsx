@@ -21,11 +21,7 @@ const About = () => {
               in Marrakech, Morocco.
             </div>
             <div className="f2 section">
-              I enjoy creating things that live on the internet, whether that be
-              websites, applications, or anything in between. My goal is to
-              always build new things that can help in the internet, when I am
-              not coding I like playing football,swimming,or helping my dad at
-              his store
+I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build new things that can help people with their business and bring value to them, I always love learning something new, when I'm not coding I like playing football, swimming, or helping my dad at his store
             </div>
           </div>
           <div className="image">

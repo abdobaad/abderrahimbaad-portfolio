@@ -9,6 +9,23 @@ import { Fade } from "react-reveal";
 
 const array = [
   {
+    link: "https://cheapestflight.herokuapp.com/",
+    name: "Cheapest Flights",
+    description:
+      "it's a web application that gets the flight coordinates and its date so it can display the cheapest flights!it's web application that gets the the airports location and the date of a flight so it can display the cheapest flights!",
+    tech: [
+      "Reactjs",
+      "Redux",
+      "Node.js",
+      "Sass",
+      "MongoDB",
+      "ExpressJs",
+      "SkyScanner API",
+    ],
+    image:"https://abdobaad9991-gmail.tinytake.com/media/eb4dd6?filename=1607067602297_2_637426642379517608.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=556%22%20title=%22Powered%20by%20TinyTake%20Screen%20Capture%22",
+    githubRepo: "https://github.com/abdobaad/fligh-high",
+  },
+  {
     link: "https://mymoviesflixapp.herokuapp.com/",
     name: "MyFlixMovies",
     description:
