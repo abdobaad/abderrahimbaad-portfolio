@@ -15,6 +15,7 @@ const About = () => {
       </Fade>
       <Fade duration={500} bottom>
         <div className="about-content">
+
           <div className="text">
             <div className="f1 section">
               Hello! I'm Abderrahim Baad, a FullStack Javascript Developer based

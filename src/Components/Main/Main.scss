@@ -3,14 +3,25 @@
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
-  // align-items: center;
+  position: relative;
   justify-content: center;
 
   .main-home_content {
-    //margin-top: -3rem;
-    //width: 60%;
+    .baad {
+      font-family: "Major Mono Display", monospace;
+      font-size: 30rem;
+      /* display: block; */
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      color: #95074015;
+      margin-top: -5rem;
+    }
     .hi {
-      color: #64ffda;
+      color: #950740;
       font-size: 1.5rem;
       font-family: "Tenali Ramakrishna", sans-serif;
       animation-name: scrollToTop;
@@ -29,7 +40,7 @@
       animation-name: scrollToTop;
       transition-delay: 200ms;
       position: relative;
-      // opacity: 1;
+
       animation-duration: 2s;
     }
     .nfo {
@@ -39,7 +50,7 @@
 
       animation-name: scrollToTop;
       position: relative;
-      // opacity: 1;
+
       animation-duration: 2.5s;
       transition-delay: 300ms;
     }
@@ -50,30 +61,138 @@
       transition-delay: 400ms;
       animation-name: scrollToTop;
       position: relative;
-      // opacity: 1;
+
       animation-duration: 3s;
     }
+  }
+
+  #fixed-home_btn {
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #a8b2d1;
+    padding: 1rem;
+    border-radius: 50%;
+    position: fixed;
+    left: auto;
+    transform: translateZ(0);
+    animation-name: fromRight;
+    animation-duration: 500ms;
+    cursor: pointer;
+    background: #950740;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    bottom: 2rem;
+    right: 3rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  #fixed-home_btn::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #950740;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+  }
+
+  #fixed-home_btn:hover::before {
+    background-color: #950740;
+    animation-name: beforeAnimate;
+    animation-duration: 500ms;
+    z-index: -2;
   }
 
   .home_btn {
     margin-top: 5rem;
     padding: 1rem;
-    border: 2px solid #64ffda;
     font-family: "Tenali Ramakrishna", sans-serif;
     width: 6rem;
+    height: 2rem;
     font-size: 1.2rem;
-    // margin: 3rem auto;
-    color: #64ffda;
     border-radius: 3px;
-    /*   animation-name: scrollToTop;
-    position: relative;
-    // opacity: 1;
-    animation-duration: 4s;
-    transition: 0.5s; */
+    background-color: #a8b2d1;
+    color: #1a1a1d;
+    transition: 500ms;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2rem;
+    left: 0;
+    animation-name: toRight;
+    animation-duration: 2s;
+    span {
+      display: block;
+      animation-name: showText;
+      animation-duration: 2s;
+    }
   }
   .home_btn:hover {
     cursor: pointer;
-    background-color: #64ffdb36;
+    box-shadow: inset 8rem 4rem 0 #950740;
+    color: #a8b2d1;
+  }
+}
+
+@keyframes beforeAnimate {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  /*  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.5;
+  } */
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes showText {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    right: -1rem;
+  }
+  to {
+    right: 3rem;
+  }
+}
+
+@keyframes toRight {
+  from {
+    left: -2rem;
+  }
+  to {
+    left: 0;
   }
 }
 
@@ -104,9 +223,23 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .main-home {
+    .main-home_content {
+      .baad {
+        font-size: 20rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .main-home {
     .main-home_content {
+      .baad {
+        font-size: 10rem;
+        top: auto;
+      }
       .devname {
         font-size: 3rem;
       }

@@ -5,7 +5,7 @@
 
   .contact-me {
     margin: 1rem 0;
-    color: #64ffda;
+    color: #950740;
     font-family: "Tenali Ramakrishna", sans-serif;
     font-size: 1.5rem;
   }
@@ -29,17 +29,18 @@
 
   .say_hello {
     padding: 1rem;
-    border: 2px solid #64ffda;
     font-family: "Tenali Ramakrishna", sans-serif;
     width: 6rem;
     margin: 3rem auto;
-    color: #64ffda;
+    color: #1a1a1d;
+    background-color: #a8b2d1;
     border-radius: 3px;
     transition: 0.5s;
   }
   .say_hello:hover {
     cursor: pointer;
-    background-color: #64ffdb36;
+    box-shadow: inset -8rem -3.5rem 0 #950740;
+    color: #a8b2d1;
   }
 }
 

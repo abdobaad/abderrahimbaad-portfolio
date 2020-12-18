@@ -22,7 +22,8 @@ const array = [
       "ExpressJs",
       "SkyScanner API",
     ],
-    image:"https://abdobaad9991-gmail.tinytake.com/media/eb4dd6?filename=1607067602297_2_637426642379517608.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=556%22%20title=%22Powered%20by%20TinyTake%20Screen%20Capture%22",
+    image:
+      "https://abdobaad9991-gmail.tinytake.com/media/eb4dd6?filename=1607067602297_2_637426642379517608.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=556%22%20title=%22Powered%20by%20TinyTake%20Screen%20Capture%22",
     githubRepo: "https://github.com/abdobaad/fligh-high",
   },
   {
@@ -58,7 +59,7 @@ const Works = () => {
     <div id="work" className="works_container">
       <Fade left>
         <div className="title-container">
-          <h1>Some thing I'v Built</h1>
+          <h1>Some things I've Built</h1>
           <div className="line" />
         </div>
       </Fade>

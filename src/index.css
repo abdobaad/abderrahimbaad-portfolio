@@ -16,3 +16,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #1a1a1d;
+  /* background: linear-gradient(90deg, #1a1a1d, #1a1a1d 1px, #323237 0, #323237);*/
+  border-left: 1px solid rgb(55, 55, 55);
+}
+
+::-webkit-scrollbar-track {
+  height: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  height: 10px;
+  width: 10px;
+  border-radius: 30px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, #e52e71, #ff679e);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1d inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

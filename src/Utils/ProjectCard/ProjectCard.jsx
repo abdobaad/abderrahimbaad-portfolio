@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 
 import GitHubIcon from "../../Resources/icons/github1.svg";
 import ExternalIcon from "../../Resources/icons/external.svg";
@@ -6,30 +6,30 @@ import ExternalIcon from "../../Resources/icons/external.svg";
 import "./ProjectCard.scss";
 import { Fade } from "react-reveal";
 
+
 const ProjectCard = ({ type, project }) => {
+  const [imgHover,setImgHover] = useState(false);
+
   return (
     <Fade bottom>
       <div className={type}>
         <div className="card_container">
-          {/*         <a href={project.link} target="_blanc">
-           */}{" "}
+          <div className={`${type === 'left' ? 'bottom-box box-left' : 'bottom-box box-right'}`} />
           <a href={project.link} target="_blanc">
             <div className="card-image" style={{}}>
+              <div className="hover-effect" />
               <div
+                onMouseEnter={()=>setImgHover(true)}
+                onMouseLeave={()=>setImgHover(false)}
                 className="img"
                 style={{
                   backgroundImage: `url(${project.image})`,
                   backgroundSize: "cover",
                   backgroundPositionX: "center",
-                  //backgroundColor: "#64ffdbd3",
-
-                  //  backgroundColor: "linear-gradient(#333,#64ffdbd3)",
                 }}
               />
             </div>
           </a>
-          {/*         </a>
-           */}{" "}
           <div className="card-nfo">
             <div className="featured_project">Featured Project</div>
             <div className="project_title"> {project.name}</div>

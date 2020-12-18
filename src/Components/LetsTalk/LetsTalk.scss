@@ -1,0 +1,289 @@
+@mixin centerIt {
+  display: flex;
+  justify-content: center;
+}
+
+.letstalk-container {
+  height: 100%;
+  width: 100%;
+  background: #6868687b;
+  position: fixed;
+  top: 0;
+  z-index: 201;
+  @include centerIt();
+  overflow-y: auto;
+
+  .second_container {
+    margin: 2rem auto;
+    position: relative;
+    max-width: 742px;
+    svg {
+      position: absolute;
+    }
+    .letstalk {
+      padding: 2rem 7rem;
+      position: relative;
+      animation: fromTop 500ms;
+
+      .close_btn {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        img {
+          height: 1rem;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      height: 918px;
+      @include centerIt();
+      align-items: center;
+      flex-direction: column;
+      background-color: #1a1a1d;
+      margin: 2rem auto;
+      min-height: 50rem;
+
+      clip-path: url(#myClip);
+
+      .title {
+        .header_title {
+          margin-top: 0;
+          background: linear-gradient(180deg, #e52e71, #ff679e);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          font-size: 3rem;
+          font-family: "Metal Mania", cursive;
+        }
+        .header_text {
+          color: #e6e6e6;
+          font-family: "Tenali Ramakrishna", sans-serif;
+        }
+      }
+
+      .letstalk_form-container {
+        width: 100%;
+        .input-container {
+          height: 2rem;
+          position: relative;
+          margin: 3rem auto;
+          border-bottom: 1px solid #3d3d3d;
+          font-family: "Tenali Ramakrishna", sans-serif;
+          .error_comp {
+            position: absolute;
+            bottom: -1.5rem;
+            color: #ff8484;
+            margin-left: 1rem;
+            font-size: 0.8rem;
+          }
+          label {
+            position: absolute;
+            top: 0.3rem;
+            left: 0;
+            margin-left: 1rem;
+            pointer-events: none;
+            transition: 300ms ease-out;
+            color: #fff;
+          }
+          input {
+            height: 100%;
+            width: 100%;
+            padding-left: 1rem;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+          }
+          textarea {
+            height: 100%;
+            max-width: 100%;
+            padding-left: 1rem;
+            resize: none;
+            background-color: inherit;
+            border: none;
+            font-size: 1.5rem;
+            color: #fff;
+          }
+          textarea:focus {
+            outline: none;
+          }
+          .inderline {
+            width: 100%;
+            position: absolute;
+            bottom: -1px;
+            height: 1px;
+          }
+          .inderline::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transform: scale(0);
+            transition: transform 300ms ease-in;
+          }
+        }
+
+        .input-container input:focus ~ label,
+        .input-container textarea:focus ~ label,
+        .input-container input:not([value=""]) ~ label,
+        .input-container textarea:valid ~ label {
+          transform: translate(-1.5rem, -1.5rem) scale(0.8);
+          color: rgb(155, 155, 155);
+        }
+
+        .input-container input:focus ~ .inderline::before,
+        .input-container textarea:focus ~ .inderline::before {
+          transform: scale(1);
+          background-color: silver;
+        }
+
+        .input-container input[type="email"]:not([value=""]) ~ label {
+          transform: translate(-1.5rem, -1.5rem) scale(0.8);
+        }
+
+        .submit_btn {
+          margin-top: 5rem;
+          height: 3rem;
+          border: none;
+          border-radius: 30px;
+          padding: 1rem;
+          vertical-align: middle;
+          width: 10rem;
+          display: flex;
+          font-size: 1.1rem;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          background-color: #fff;
+          font-family: "Tenali Ramakrishna", sans-serif;
+          transition: all 0.5s;
+          position: relative;
+          overflow: hidden;
+          outline: none;
+
+          span {
+            color: #f7015c;
+            position: absolute;
+            z-index: 2;
+          }
+        }
+        #loading_btn {
+          animation: loading 1s infinite;
+        }
+        .submit_btn::before {
+          content: "";
+          position: absolute;
+          background: linear-gradient(180deg, #ff679e, #e52e71);
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          transform: scale(0);
+          transition: transform 0.2s ease-in;
+          border-radius: 30px;
+        }
+        .submit_btn:hover::before {
+          transform: scale(1);
+
+          // background: linear-gradient(180deg, #e52e71, #ff679e);
+        }
+
+        .msg_sent {
+          background: #2cff46;
+          color: #fff;
+          padding: 1rem;
+          border-radius: 20px;
+        }
+
+        .submit_btn:hover {
+          span {
+            color: #fff;
+          }
+        }
+      }
+
+      .ok_btn {
+        height: 3rem;
+        width: 7rem;
+        border: none;
+        border-radius: 30px;
+        background: rgb(255, 255, 255);
+        color: #920740;
+        transition: 200ms ease-in;
+        margin-top: 5rem;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .ok_btn:hover {
+        box-shadow: inset 7rem 0 #920740;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-90px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1.5px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(1.5px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+////Media queries
+
+@media screen and (max-width: 800px) {
+  .letstalk-container {
+    .second_container {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+
+      max-width: none;
+      svg {
+        display: none;
+      }
+      .letstalk {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+
+        .close_btn {
+          top: 2rem;
+        }
+
+        .title {
+          width: 80%;
+        }
+        .letstalk_form-container {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ import NodejsIcon from "../../Resources/icons/nodejs.svg";
 import Mongodb from "../../Resources/icons/mongodb.svg";
 import SassIcon from "../../Resources/icons/sass.svg";
 import ReduxIcon from "../../Resources/icons/redux.svg";
+import GatsbyIcon from "../../Resources/icons/gatsby.svg";
 
 import "./Technologies.scss";
 
@@ -37,7 +38,10 @@ const Technologies = () => {
         <Slide bottom delay={80} duration={400}>
           <img src={ReactjsIcon} alt="react" />
         </Slide>
-        <Slide bottom delay={120} duration={400}>
+        <Slide bottom delay={110} duration={400}>
+          <img src={"https://www.gatsbyjs.com/Gatsby-Monogram.svg"} style={{height:"4rem"}} alt="gatsby" />
+        </Slide>
+        <Slide bottom delay={140} duration={400}>
           <img src={ReduxIcon} alt="redux" />
         </Slide>
         <Slide bottom delay={160} duration={400}>
@@ -46,6 +50,7 @@ const Technologies = () => {
         <Slide bottom delay={180} duration={400}>
           <img src={Mongodb} alt="mongodb" />
         </Slide>
+       
       </div>
     </div>
   );
