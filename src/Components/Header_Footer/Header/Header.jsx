@@ -1,6 +1,7 @@
 import React,{ useState,useContext }  from "react";
 
 import { Link } from "react-scroll";
+import Logo from "../../../Resources/icons/logo.svg"
 import {AppContext} from "../../../ContextApi/Reducer";
 import { Fade } from "react-reveal";
 import "./Header.scss";
@@ -26,7 +27,8 @@ const Header = ({ scroll }) => {
       <header>
         <a href="/">
           <div className="logo">
-            <span>B</span>aad
+           {/*  <span>B</span>aad */}
+           <img src={Logo} alt="logo"/>
           </div>
         </a>
         <nav className="navigation">
