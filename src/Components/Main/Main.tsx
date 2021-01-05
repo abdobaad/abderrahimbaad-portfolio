@@ -7,9 +7,9 @@ import msgIcon from "../../Resources/icons/conversation.svg";
 
 
 
-const Main = () => {
+const Main:React.FC = ():JSX.Element => {
 
- const [msgBtn,setMsgBtn] = useState(true);
+ const [msgBtn,setMsgBtn] = useState<boolean>(true);
  const {contact} = useContext(AppContext);
  const [showContact,setShowContact] = contact;
 
@@ -44,7 +44,7 @@ const Main = () => {
         </p>
       </div>
       {msgBtn?
-      <div onClick={()=> ContactMe()} id={`fixed-home_btn`} > <img src={msgIcon} alt="msg" /> </div>  
+      <div onClick={()=> ContactMe()} id={`fixed-home_btn`} > <img src={`${msgIcon}`} alt="msg" /> </div>  
       :
       <div onClick={()=> ContactMe()} className={`home_btn`}><span>Get in touch</span></div>  
       }

@@ -1,12 +1,15 @@
 import React from "react";
-import Fade from "react-reveal";
-import Me from "../../Resources/images/me.jpg";
 
+import Fade from "react-reveal";
 import "./About.scss";
 
-const About = () => {
+interface IAbout {
+  id:string
+}
+
+const About:React.FC <IAbout>=({id}):JSX.Element => {
   return (
-    <div id="about" className="about_container">
+    <div id={id} className="about_container">
       <Fade left>
         <div className="title-container">
           <h1>About Me</h1>
@@ -22,13 +25,13 @@ const About = () => {
               in Marrakech, Morocco.
             </div>
             <div className="f2 section">
-I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build new things that can help people with their business and bring value to them, I always love learning something new, when I'm not coding I like playing football, swimming, or helping my dad at his store
+                I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build new things that can help people with their business and bring value to them, I always love learning something new, when I'm not coding I like playing football, swimming, or helping my dad at his store
             </div>
           </div>
           <div className="image">
             <a target="_blanc" href="https://github.com/abdobaad">
               <div className="img-container">
-                <div className="sec-cont">{/*  <img src={Me} /> */}</div>
+                <div className="sec-cont" />
               </div>
             </a>
           </div>

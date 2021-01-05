@@ -1,46 +1,53 @@
 import React,{useState,useContext} from 'react';
-import CloseIcon from "../../Resources/icons/close.svg";
+import  CloseIcon from "../../Resources/icons/close.svg";
 import emailjs from "emailjs-com"
 import "./LetsTalk.scss";
 import {AppContext} from "../../ContextApi/Reducer";
 
+interface ITalkData {
+    name:string ,
+    email:string,
+    subject:string,
+    message:string
+}
 
-
-const LetsTalk = () => {
+const LetsTalk:React.FC = ():JSX.Element => {
+    //TODO
     const {contact} = useContext(AppContext);
     const [showContact,setShowContact] = contact;
-    const [TalkData,setTalkData] = useState({
+
+
+    const [TalkData,setTalkData] = useState<ITalkData>({
         name:"",
         email:"",
         subject:"",
         message:""
     });
-    const [sending,setSending] = useState(false);
-    const [thereisError,setThereisError] = useState(false);
-    const [msgSent,setMsgSent] = useState(false);
-    const [notValid,setNotValid] = useState(false);
-    const validEmail = email => {
+    const [sending,setSending] = useState<boolean>(false);
+    const [thereisError,setThereisError] = useState<boolean>(false);
+    const [msgSent,setMsgSent] = useState<boolean>(false);
+    const [notValid,setNotValid] = useState<boolean>(false);
+    const validEmail = (email:string):boolean => {
     if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
         { 
-            return (true)
+            return true
         }
-            return (false)
+            return false
     }
 
-    const changeHandler =  e => {
+    const changeHandler =  (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setTalkData({
             ...TalkData,
             [e.target.name]:e.target.value
         })
 
     }
-    const SubmitHandler =async e => {
+    const SubmitHandler =async (e:React.FormEvent<HTMLFormElement>):Promise<void> => {
         e.preventDefault();
         e.persist();
         const {name,email,subject,message} = TalkData;
        if(!name || !email || !subject || !message){
            setThereisError(true);
-
        }else{
          const checkEmail =await validEmail(TalkData.email); 
 
@@ -51,7 +58,7 @@ const LetsTalk = () => {
 
         setSending(true);
 
-        const emailMe = await  emailjs.sendForm('service_j3l9779', 'template_yuxxcrq', e.target, 'user_tglqlROb6m51jJP7M2Hb3');
+        const emailMe = await  emailjs.sendForm('service_j3l9779', 'template_yuxxcrq', "", 'user_tglqlROb6m51jJP7M2Hb3');
 
         if(emailMe.text !== 'OK'){
           return console.log("Sorry,the msg wasn't sent");
@@ -66,13 +73,12 @@ const LetsTalk = () => {
        }
     }
 
-    const closeContact = () => {
+    const closeContact = ():void => {
       setShowContact(false)
     }
 
     return (
         <div  style={!showContact ? {display:"none"}:{}} className="letstalk-container">
-        
            <div className="second_container">
            <svg width="742px" height="918px" viewBox="0 0 742 918" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <defs>
@@ -90,7 +96,7 @@ const LetsTalk = () => {
             </svg> 
             <div className="letstalk">
                 <span onClick={()=>closeContact()} className="close_btn" >
-                    <img src={CloseIcon} alt="close" /> 
+                    <img src={`${CloseIcon}`} alt="close" /> 
                 </span>
                 <div className="title">
                        <h1 style={msgSent ? {  marginBottom: "5rem",textAlign: "center"} : {}} className="header_title">{msgSent ? 'Thank you!' : "Let's Talk"}</h1>
@@ -118,7 +124,7 @@ const LetsTalk = () => {
                           {thereisError && TalkData.subject === ''? <span className="error_comp">The Subject is Required</span>: null}
                       </div>
                       <div style={{height:"10em"}} className="input-container">
-                          <textarea  onChange={e=> changeHandler(e)} value={TalkData.message} name="message" cols="50" required />
+                          <textarea  onChange={e=> changeHandler(e)} value={TalkData.message} name="message" cols={50} required />
                           <div className="inderline" />
                           <label htmlFor="message">Message *</label>
                           {thereisError && TalkData.message === ''  ? <span className="error_comp">The Message is Required</span>: null}

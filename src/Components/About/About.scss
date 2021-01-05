@@ -25,22 +25,27 @@
       .img-container {
         width: 15rem;
         border: 20px solid #7505325b;
-        //  border-radius: 5px;
+
         height: 15rem;
         padding: 5px;
         background-color: #64ffdb07;
         .sec-cont {
           width: 15rem;
           height: 15rem;
-          //   background-color: #950740;
+
           border-radius: 5px;
-          background-image: url("/static/media/me.c1afaad2.jpg");
+          background-image: url("../../Resources/images/me.jpg");
           background-size: cover;
           position: absolute;
           top: -5px;
           left: -5px;
           margin: 0 auto;
           transition: 0.7s;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
         }
       }
       .img-container:hover {
@@ -48,7 +53,7 @@
           top: 25px;
           left: 25px;
           background-image: linear-gradient(#950740aa, #95074079),
-            url("/static/media/me.c1afaad2.jpg");
+            url("../../Resources/images/me.jpg");
         }
       }
     }

@@ -40,7 +40,7 @@ const array = [
       "ExpressJs",
       "The Movie DB",
     ],
-    image,
+    image:`${image}`,
     githubRepo: "https://github.com/abdobaad/myfilxmovie",
   },
   {
@@ -49,14 +49,16 @@ const array = [
     description:
       "This is an e-commerce full-stack website built with the MERN stack , the design and the code it's all by me,I hope you like it.",
     tech: ["Reactjs", "Redux", "Node.js", "Sass", "MongoDB", "ExpressJs"],
-    image: image1,
+    image: `${image1}`,
     githubRepo: "https://github.com/abdobaad/hanotelectro-mernapp",
   },
 ];
 
-const Works = () => {
+type Props = {id:string}
+
+const Works:React.FC<Props> = ({id}) => {
   return (
-    <div id="work" className="works_container">
+    <div id={id} className="works_container">
       <Fade left>
         <div className="title-container">
           <h1>Some things I've Built</h1>

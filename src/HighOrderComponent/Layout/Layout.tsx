@@ -5,11 +5,16 @@ import {AppContext} from "../../ContextApi/Reducer";
 
 import "./Layout.scss";
 
-const Layout = (props) => {
+interface ILayout {
+  children:React.ReactNode
+}
+
+const Layout:React.FC<ILayout> = ({children}):JSX.Element => {
   
   const {contact} = useContext(AppContext);
   const [showContact,setShowContact] = contact;
-  const [scroll, setScroll] = useState(0);
+
+  const [scroll, setScroll] = useState<number>(0);
   
 
   window.onscroll = function () {
@@ -19,7 +24,7 @@ const Layout = (props) => {
   return (
     <div  style={showContact? {position:"fixed"}:{}}  className="layout_container">
       <Header scroll={scroll} />
-      {props.children}
+      {children}
       <Footer />
     </div>
   );
