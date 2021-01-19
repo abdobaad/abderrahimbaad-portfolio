@@ -4,11 +4,11 @@ import React from "react";
 import Fade, { Slide } from "react-reveal";
 
 //Images
-import HtmlIcon from "../../Resources/icons/html-5.svg";
-import CssIcon from "../../Resources/icons/css3.svg";
+import HtmlIcon from "../../Resources/icons/html5.svg";
+import CssIcon from "../../Resources/icons/css.svg";
 import JavascriptIcon from "../../Resources/icons/javascript.svg";
 import ReactjsIcon from "../../Resources/icons/react.svg";
-import NodejsIcon from "../../Resources/icons/nodejs.svg";
+import NodejsIcon from "../../Resources/icons/node-js.svg";
 import Mongodb from "../../Resources/icons/mongodb.svg";
 import SassIcon from "../../Resources/icons/sass.svg";
 import ReduxIcon from "../../Resources/icons/redux.svg";

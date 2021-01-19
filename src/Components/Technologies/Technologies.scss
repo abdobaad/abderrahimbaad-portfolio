@@ -8,9 +8,11 @@
     align-items: center;
 
     img {
-      margin: 10px;
+      margin: 20px;
       animation-name: showIcon;
       animation-duration: 3s;
+      height: 4rem;
+      cursor: pointer;
     }
   }
 }
