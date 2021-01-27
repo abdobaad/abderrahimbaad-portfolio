@@ -13,6 +13,8 @@ import Mongodb from "../../Resources/icons/mongodb.svg";
 import SassIcon from "../../Resources/icons/sass.svg";
 import ReduxIcon from "../../Resources/icons/redux.svg";
 import TypescriptIcon from "../../Resources/icons/typescript.svg"
+import MySql from "../../Resources/icons/mysql.svg"
+import Nextjs from "../../Resources/icons/nextjs-3.svg"
 
 //styles
 import "./Technologies.scss";
@@ -29,7 +31,7 @@ const Technologies:React.FC<Props>= ({id}) => {
         </div>
       </Fade>
 
-      <div className="tech_icons-container">
+      <div className="tech_icons-container" style={{backgroundColor:"#ffffff08"}}>
         <Slide bottom delay={0} duration={400}>
           <img src={`${HtmlIcon}`} alt="html" />
         </Slide>
@@ -48,6 +50,9 @@ const Technologies:React.FC<Props>= ({id}) => {
         <Slide bottom delay={95} duration={400}>
           <img src={`${ReactjsIcon}`} alt="react" />
         </Slide>
+        <Slide bottom delay={180} duration={400}>
+          <img src={`${Nextjs}`} alt="mongodb" />
+        </Slide>
         <Slide bottom delay={110} duration={400}>
           <img src={"https://www.gatsbyjs.com/Gatsby-Monogram.svg"} style={{height:"4rem"}} alt="gatsby" />
         </Slide>
@@ -60,6 +65,9 @@ const Technologies:React.FC<Props>= ({id}) => {
         </Slide>
         <Slide bottom delay={180} duration={400}>
           <img src={`${Mongodb}`} alt="mongodb" />
+        </Slide>
+        <Slide bottom delay={180} duration={400}>
+          <img src={`${MySql}`} alt="mongodb" />
         </Slide>
        </div>
        
