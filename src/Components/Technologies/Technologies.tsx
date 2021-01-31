@@ -32,7 +32,7 @@ const Technologies:React.FC<Props>= ({id}) => {
       </Fade>
 
      <Slide bottom>
-     <div className="tech_icons-container" style={{backgroundColor:"#ffffff08"}}>
+     <div className="tech_icons-container">
         <Slide bottom delay={100} duration={600}>
           <img src={`${HtmlIcon}`} alt="html" />
         </Slide>
