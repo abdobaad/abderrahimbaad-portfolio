@@ -12,7 +12,7 @@ const array = [
     link: "https://cheapestflight.herokuapp.com/",
     name: "Cheapest Flights",
     description:
-      "it's a web application that gets the flight coordinates and its date so it can display the cheapest flights!it's web application that gets the the airports location and the date of a flight so it can display the cheapest flights!",
+      "it's web application that gets the the airports location and the date of a flight so it can display the cheapest flights!",
     tech: [
       "Reactjs",
       "Redux",

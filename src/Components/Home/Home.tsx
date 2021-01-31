@@ -6,7 +6,7 @@ import Technologies from "../Technologies/Technologies";
 import Works from "../Works/Works";
 import Contact from "../Contact/Contact";
 import About from "../About/About";
-import LetsTalk from "../LetsTalk/LetsTalk";
+import LetsTalk from "../LetsTalk/LetsTalk.jsx";
 //Icons
 import FacebookIcon from "../../Resources/icons/facebook.svg";
 import InstagramIcon from "../../Resources/icons/instagram.svg";

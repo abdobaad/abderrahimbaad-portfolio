@@ -31,47 +31,49 @@ const Technologies:React.FC<Props>= ({id}) => {
         </div>
       </Fade>
 
-      <div className="tech_icons-container" style={{backgroundColor:"#ffffff08"}}>
-        <Slide bottom delay={0} duration={400}>
+     <Slide bottom>
+     <div className="tech_icons-container" style={{backgroundColor:"#ffffff08"}}>
+        <Slide bottom delay={100} duration={600}>
           <img src={`${HtmlIcon}`} alt="html" />
         </Slide>
-        <Slide bottom delay={20} duration={400}>
+        <Slide bottom delay={120} duration={600}>
           <img src={`${CssIcon}`} alt="css3"  />
         </Slide>
-        <Slide bottom delay={40} duration={400}>
+        <Slide bottom delay={140} duration={600}>
           <img src={`${SassIcon}`} alt="sass" />
         </Slide>
-        <Slide bottom delay={60} duration={400}>
+        <Slide bottom delay={160} duration={600}>
           <img src={`${JavascriptIcon}`} alt="js" />
         </Slide>
-        <Slide bottom delay={80} duration={400}>
+        <Slide bottom delay={180} duration={600}>
           <img src={`${TypescriptIcon}`} alt="typescript"/>
         </Slide>
-        <Slide bottom delay={95} duration={400}>
+        <Slide bottom delay={200} duration={600}>
           <img src={`${ReactjsIcon}`} alt="react" />
         </Slide>
-        <Slide bottom delay={180} duration={400}>
+        <Slide bottom delay={210} duration={600}>
           <img src={`${Nextjs}`} alt="mongodb" />
         </Slide>
-        <Slide bottom delay={110} duration={400}>
+        <Slide bottom delay={220} duration={600}>
           <img src={"https://www.gatsbyjs.com/Gatsby-Monogram.svg"} style={{height:"4rem"}} alt="gatsby" />
         </Slide>
-        <Slide bottom delay={140} duration={400}>
+        <Slide bottom delay={240} duration={600}>
           <img src={`${ReduxIcon}`} alt="redux" />
         </Slide>
        <div className="backend">
-       <Slide bottom delay={160} duration={400}>
+       <Slide bottom delay={260} duration={600}>
           <img src={`${NodejsIcon}`} alt="node" />
         </Slide>
-        <Slide bottom delay={180} duration={400}>
+        <Slide bottom delay={280} duration={600}>
           <img src={`${Mongodb}`} alt="mongodb" />
         </Slide>
-        <Slide bottom delay={180} duration={400}>
+        <Slide bottom delay={300} duration={600}>
           <img src={`${MySql}`} alt="mongodb" />
         </Slide>
        </div>
        
       </div>
+     </Slide>
     </div>
   );
 };

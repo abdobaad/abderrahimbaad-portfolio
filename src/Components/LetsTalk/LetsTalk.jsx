@@ -4,30 +4,30 @@ import emailjs from "emailjs-com"
 import "./LetsTalk.scss";
 import {AppContext} from "../../ContextApi/Reducer";
 
-interface ITalkData {
+/* interface ITalkData {
     name:string ,
     email:string,
     subject:string,
     message:string
-}
+} */
 
-const LetsTalk:React.FC = ():JSX.Element => {
+const LetsTalk = () => {
     //TODO
     const {contact} = useContext(AppContext);
     const [showContact,setShowContact] = contact;
 
 
-    const [TalkData,setTalkData] = useState<ITalkData>({
+    const [TalkData,setTalkData] = useState({
         name:"",
         email:"",
         subject:"",
         message:""
     });
-    const [sending,setSending] = useState<boolean>(false);
-    const [thereisError,setThereisError] = useState<boolean>(false);
-    const [msgSent,setMsgSent] = useState<boolean>(false);
-    const [notValid,setNotValid] = useState<boolean>(false);
-    const validEmail = (email:string):boolean => {
+    const [sending,setSending] = useState(false);
+    const [thereisError,setThereisError] = useState(false);
+    const [msgSent,setMsgSent] = useState(false);
+    const [notValid,setNotValid] = useState(false);
+    const validEmail = (email) => {
     if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
         { 
             return true
@@ -35,14 +35,14 @@ const LetsTalk:React.FC = ():JSX.Element => {
             return false
     }
 
-    const changeHandler =  (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const changeHandler =  (e) => {
         setTalkData({
             ...TalkData,
             [e.target.name]:e.target.value
         })
 
     }
-    const SubmitHandler =async (e:React.FormEvent<HTMLFormElement>):Promise<void> => {
+    const SubmitHandler =async (e) => {
         e.preventDefault();
         e.persist();
         const {name,email,subject,message} = TalkData;
@@ -58,7 +58,7 @@ const LetsTalk:React.FC = ():JSX.Element => {
 
         setSending(true);
 
-        const emailMe = await  emailjs.sendForm('service_j3l9779', 'template_yuxxcrq', "", 'user_tglqlROb6m51jJP7M2Hb3');
+        const emailMe = await  emailjs.sendForm('service_j3l9779', 'template_yuxxcrq', e.target , 'user_tglqlROb6m51jJP7M2Hb3');
 
         if(emailMe.text !== 'OK'){
           return console.log("Sorry,the msg wasn't sent");
@@ -73,7 +73,7 @@ const LetsTalk:React.FC = ():JSX.Element => {
        }
     }
 
-    const closeContact = ():void => {
+    const closeContact = () => {
       setShowContact(false)
     }
 
