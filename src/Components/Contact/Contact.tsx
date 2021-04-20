@@ -8,7 +8,8 @@ type Props = {id:string};
 
 const Contact:React.FC<Props> = ({id}):JSX.Element => {
   const {contact} = useContext(AppContext);
-  const [showContact,setShowContact] = contact;
+  const [,setShowContact] = contact;
+
 
   return (
     <div id={id} className="contact_container">
@@ -19,7 +20,7 @@ const Contact:React.FC<Props> = ({id}):JSX.Element => {
         I'm currently doing freelancing, so feel free to contact me, I'll respond as soon as possible
         </div>
 
-        <div onClick={()=>setShowContact(true)} className="say_hello">Say Hello!</div>
+        <div onClick={()=> setShowContact(true)} className="say_hello">Say Hello!</div>
       </Zoom>
     </div>
   );

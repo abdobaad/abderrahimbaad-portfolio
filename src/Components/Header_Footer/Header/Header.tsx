@@ -48,7 +48,7 @@ const Header:React.FC<IHeader>= ({ scroll }):JSX.Element => {
                           style={{
                             animationDelay: `${i * 0.01}s`,
                           }}
-                          className={i == 0 ? `left_corner` : i === data.header_data.length - 1 ? 'right_corner' : 'from_top'}
+                          className={i === 0 ? `left_corner` : i === data.header_data.length - 1 ? 'right_corner' : 'from_top'}
                           to={item.toLowerCase()}    
                         >
                           {item}

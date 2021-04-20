@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React from "react";
 
 import GitHubIcon from "../../Resources/icons/github1.svg";
 import ExternalIcon from "../../Resources/icons/external.svg";
@@ -8,8 +8,6 @@ import { Fade } from "react-reveal";
 
 
 const ProjectCard = ({ type, project }) => {
-  const [imgHover,setImgHover] = useState(false);
-
   return (
     <Fade bottom>
       <div className={type}>
@@ -19,8 +17,6 @@ const ProjectCard = ({ type, project }) => {
             <div className="card-image" style={{}}>
               <div className="hover-effect" />
               <div
-                onMouseEnter={()=>setImgHover(true)}
-                onMouseLeave={()=>setImgHover(false)}
                 className="img"
                 style={{
                   backgroundImage: `url(${project.image})`,

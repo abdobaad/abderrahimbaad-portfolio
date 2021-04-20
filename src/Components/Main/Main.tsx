@@ -11,7 +11,7 @@ const Main:React.FC = ():JSX.Element => {
 
  const [msgBtn,setMsgBtn] = useState<boolean>(true);
  const {contact} = useContext(AppContext);
- const [showContact,setShowContact] = contact;
+ const [,setShowContact] = contact;
 
  const ContactMe = () => {
    setShowContact(true)

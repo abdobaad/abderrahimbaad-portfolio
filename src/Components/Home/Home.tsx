@@ -31,22 +31,22 @@ const Home:React.FC = ():JSX.Element => {
           </div>
           <div className="sides social_media">
             <div className="images-container">
-              <a href="https://github.com/abdobaad" target="_blanc">
+              <a href="https://github.com/abdobaad" target="blank">
                 <img src={`${GitHubIcon}`} alt="github" />
               </a>
               <a
                 href="https://www.linkedin.com/in/abderrahim-baad-358b71182/"
-                target="_blanc"
+                target="blank"
               >
                 <img src={`${LinkedinIcon}`} alt="linkedin" />
               </a>
-              <a href="https://www.instagram.com/abderrahimbaad/" target="_blanc">
+              <a href="https://www.instagram.com/abderrahimbaad/" target="blank">
                 <img src={`${InstagramIcon}`} alt="instagram" />
               </a>
-              <a href="https://www.facebook.com/abdarrahim.baad/" target="_blanc">
+              <a href="https://www.facebook.com/abdarrahim.baad/" target="blank">
                 <img src={`${FacebookIcon}`} alt="facebook" />
               </a>
-              <a href="https://twitter.com/AbderrahmBaad" target="_blanc">
+              <a href="https://twitter.com/AbderrahmBaad" target="blank">
                 <img src={`${TwitterkIcon}`} alt="twitter" />
               </a>
             </div>

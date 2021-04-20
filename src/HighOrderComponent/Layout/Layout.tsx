@@ -12,7 +12,7 @@ interface ILayout {
 const Layout:React.FC<ILayout> = ({children}):JSX.Element => {
   
   const {contact} = useContext(AppContext);
-  const [showContact,setShowContact] = contact;
+ // const [showContact,] = contact;
 
   const [scroll, setScroll] = useState<number>(0);
   
@@ -22,7 +22,7 @@ const Layout:React.FC<ILayout> = ({children}):JSX.Element => {
   };
 
   return (
-    <div  style={showContact? {position:"fixed"}:{}}  className="layout_container">
+    <div  style={contact? {position:"fixed"}:{}}  className="layout_container">
       <Header scroll={scroll} />
       {children}
       <Footer />

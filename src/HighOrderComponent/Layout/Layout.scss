@@ -1,6 +1,9 @@
 .layout_container {
   background-color: #1a1a1d;
-  position: absolute;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative !important;
 }
 
 .title-container {
