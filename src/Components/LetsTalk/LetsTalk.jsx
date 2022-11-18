@@ -58,7 +58,7 @@ const LetsTalk = () => {
 
         setSending(true);
 
-        const emailMe = await  emailjs.sendForm('service_j3l9779', 'template_yuxxcrq', e.target , 'user_tglqlROb6m51jJP7M2Hb3');
+        const emailMe = await  emailjs.sendForm('service_j3l9779', 'template_yuxxcrq', e.target , 'uQOGgLDnPQdVHTqef');
 
         if(emailMe.text !== 'OK'){
           return console.log("Sorry,the msg wasn't sent");
