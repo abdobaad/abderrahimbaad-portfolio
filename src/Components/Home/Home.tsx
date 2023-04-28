@@ -52,7 +52,7 @@ const Home:React.FC = ():JSX.Element => {
             </div>
           </div>
           <div className="sides email">
-            <div className="email-container">email: abdobaad9991@gmail.com</div>
+            <div className="email-container">abdobaad9991@gmail.com</div>
           </div>
         </Layout>
    </Fragment>
